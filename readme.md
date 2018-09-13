@@ -19,7 +19,7 @@ docker run -it \
     -v $HOME:/root \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -p "3000:3000" \
-    aws-toolbox
+    binxio/aws-toolbox
 ```
 
 Mount the current workdir in the workdir in the container.
