@@ -35,15 +35,17 @@ RUN pip install \
             cfn-lint \
             chalice \
             aws-sam-cli \
+            sceptre \
+            ssm-cache \
             requests
 
 # Install ecs cli
 RUN curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest && chmod +x /usr/local/bin/ecs-cli
 
 # Install tfenv and terraform
-RUN git clone https://github.com/kamatama41/tfenv.git /apps/tfenv && \
+RUN git clone https://github.com/Zordrak/tfenv.git /apps/tfenv && \
         ln -s /apps/tfenv/bin/* /usr/local/bin
-RUN tfenv install latest
+RUN tfenv install 0.11.10
 
 WORKDIR /workdir
 ENTRYPOINT /bin/bash

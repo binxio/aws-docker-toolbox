@@ -4,6 +4,9 @@ pwd=$(shell pwd)
 build:
 	docker build --no-cache -f Dockerfile -t aws-toolbox -t binxio/aws-toolbox .
 
+buildq:
+	docker build -f Dockerfile -t aws-toolbox -t binxio/aws-toolbox .
+
 run:
 	docker run -it \
 		-v $(pwd)/:/workdir \

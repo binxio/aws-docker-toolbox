@@ -2,16 +2,19 @@
 
 This toolbox is useful for those who want to do a lot on AWS with the Linux tools, but run a Windows OS, or run MacOS but their Python setup is corrupt.
 
-Contains the following tools:
+Contains the following cli tools:
 
 * awscli
 * sam
-* terraform
-* ecs
-* ebs
+* terraform (use tfenv to install other versions!)
+* ecs-cli
+* eb
 * chalice
+* sceptre
+* cfn-lint
+* cfn-flip
 
-And a lot of other handy tools like: httpie, curl, git, jq.
+And a lot of other handy tools like: httpie, curl, git, jq, docker, jinja.
 
 ```
 docker run -it \
